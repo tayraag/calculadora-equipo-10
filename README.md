@@ -4,6 +4,7 @@ Una calculadora simple de consola desarrollada en JavaScript con cliente interac
 ## Integrantes
 
 - Tayra Aguila
+- Gaston Mendiola
 
 ## 📋 Características
 
