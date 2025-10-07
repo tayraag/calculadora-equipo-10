@@ -12,7 +12,11 @@ class Calculadora {
   }
 
   dividir(a, b) {
-    // TODO: Implementar división
+    if (b === 0) {
+      throw new Error('No se puede dividir por cero');
+    } else{
+      return a / b;
+    }
   }
 
   potencia(base, exponente) {
@@ -20,7 +24,11 @@ class Calculadora {
   }
 
   raizCuadrada(numero) {
-    // TODO: Implementar raíz cuadrada
+    if (numero < 0) {
+      throw new Error('No se puede calcular la raíz cuadrada de un número negativo');
+    } else{
+      return Math.sqrt(numero);
+    }
   }
 }
 

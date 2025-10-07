@@ -5,6 +5,7 @@ Una calculadora simple de consola desarrollada en JavaScript con cliente interac
 
 - Tayra Aguila
 - Gaston Mendiola
+- Lucas Gastón Vela
 
 ## 📋 Características
 
@@ -74,6 +75,6 @@ calculadora-curso-git/
 | `sumar(a, b)` | ✅ Implementada | Suma dos números |
 | `restar(a, b)` | ✅ Implementada | Resta dos números |
 | `multiplicar(a, b)` | ⏳ Pendiente | Multiplica dos números |
-| `dividir(a, b)` | ⏳ Pendiente | Divide dos números |
+| `dividir(a, b)` | ✅ Implementada | Divide dos números |
 | `potencia(base, exp)` | ⏳ Pendiente | Eleva un número a una potencia |
-| `raizCuadrada(num)` | ⏳ Pendiente | Calcula la raíz cuadrada |
+| `raizCuadrada(num)` | ✅ Implementada | Calcula la raíz cuadrada |
