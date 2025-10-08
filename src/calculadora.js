@@ -4,7 +4,7 @@ class Calculadora {
   }
 
   restar(a, b) {
-      return a - b;
+    return a - b;
   }
 
   multiplicar(a, b) {
@@ -14,19 +14,19 @@ class Calculadora {
   dividir(a, b) {
     if (b === 0) {
       throw new Error('No se puede dividir por cero');
-    } else{
+    } else {
       return a / b;
     }
   }
 
   potencia(base, exponente) {
-    // TODO: Implementar potencia
+    return base ** exponente;
   }
 
   raizCuadrada(numero) {
     if (numero < 0) {
       throw new Error('No se puede calcular la raíz cuadrada de un número negativo');
-    } else{
+    } else {
       return Math.sqrt(numero);
     }
   }
