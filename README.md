@@ -6,6 +6,7 @@ Una calculadora simple de consola desarrollada en JavaScript con cliente interac
 - Tayra Aguila
 - Gaston Mendiola
 - Lucas Gastón Vela
+- Szulzyk Joaquín
 
 ## 📋 Características
 
