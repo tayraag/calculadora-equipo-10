@@ -8,7 +8,7 @@ class Calculadora {
   }
 
   multiplicar(a, b) {
-    return a*b;
+    return a * b;
   }
 
   dividir(a, b) {
@@ -28,6 +28,14 @@ class Calculadora {
       throw new Error('No se puede calcular la raíz cuadrada de un número negativo');
     } else {
       return Math.sqrt(numero);
+    }
+  }
+
+  resto(a, b) {
+    if (b === 0) {
+      throw new Error('No se puede calcular el resto con divisor cero');
+    } else {
+      return a % b;
     }
   }
 }
@@ -50,3 +58,4 @@ console.log('- calc.multiplicar(a, b)');
 console.log('- calc.dividir(a, b)');
 console.log('- calc.potencia(base, exponente)');
 console.log('- calc.raizCuadrada(numero)');
+console.log('- calc.resto(a, b)');
