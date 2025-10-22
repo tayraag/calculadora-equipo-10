@@ -38,7 +38,22 @@ class Calculadora {
       return a % b;
     }
   }
+
+  //Permitir ingresar varios números mediante un array y calcular su promedio.
+  promedio(numeros){
+    if (!Array.isarray(numeros)|| numeros.length ===0){
+      throw new Error('Debe ingresar un array de números no vacío');
+    } else{
+      suma=0;
+      for (let i=0; i<numeros.length; i++){
+        suma += numeros[i];
+      }
+      return suma/numeros.length;
+    }
+  } 
 }
+
+
 
 // Exportar para usar en tests
 if (typeof module !== 'undefined' && module.exports) {
