@@ -168,6 +168,33 @@ test('raíz cuadrada de número negativo debe retornar NaN', () => {
   expect(calc.raizCuadrada(-4)).toBeNaN();
 });
 
+// Tests de Resto
+console.log('\nTests de resto:');
+test('resto de 10 % 3 = 1', () => {
+  expect(calc.resto(10, 3)).toBe(1);
+});
+
+test('resto con números negativos', () => {
+  expect(calc.resto(-10, 3)).toBe(-1);
+});
+
+test('resto cuando divisor es mayor que dividendo', () => {
+  expect(calc.resto(3, 5)).toBe(3);
+});
+
+test('resto de 0 dividido por algo', () => {
+  expect(calc.resto(0, 5)).toBe(0);
+});
+
+test('resto por cero debe lanzar error', () => {
+  try {
+    calc.resto(5, 0);
+    throw new Error('No lanzó error al dividir por cero');
+  } catch (error) {
+    expect(error.message).toBe('No se puede calcular el resto con divisor cero');
+  }
+});
+
 // Resumen
 console.log('\n=== Resumen ===');
 console.log(`Tests pasados: ${testsPasados}`);
