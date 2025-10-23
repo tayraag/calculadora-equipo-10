@@ -83,3 +83,4 @@ calculadora-curso-git/
 | `raizCuadrada(num)` | ✅ Implementada | Calcula la raíz cuadrada |
 | `promedio(array)` | ✅ Implementada | Calcula el promedio de un array |
 | `maximo(array)` | ✅ Implementada | Calcula el maximo de un array |
+| `maximo(array)` | ✅ Implementada | Encuentra el máximo de un arreglo |
