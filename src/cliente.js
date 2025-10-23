@@ -19,6 +19,7 @@ function mostrarMenu() {
   console.log('5. Potencia');
   console.log('6. Raíz Cuadrada');
   console.log('7. Resto de la división');
+  console.log('8. Promedio de varios números');
   console.log('9. Máximo de varios números');
   console.log('0. Salir');
   console.log('=================================');
@@ -29,6 +30,15 @@ function pedirNumero(mensaje) {
     rl.question(mensaje, (respuesta) => {
       const numero = parseFloat(respuesta);
       resolve(numero);
+    });
+  });
+}
+
+function pedirNumerosArray(mensaje) {
+  return new Promise((resolve) => {
+    rl.question(mensaje, (respuesta) => {
+      const numeros = respuesta.split(',').map(num => parseFloat(num.trim()));
+      resolve(numeros);
     });
   });
 }
@@ -45,6 +55,12 @@ async function operacionDosNumeros(operacion, nombreOperacion) {
     console.log(`\n✓ Resultado: ${num1} ${getSimboloOperacion(nombreOperacion)} ${num2} = ${resultado}`);
   }
 }
+
+async function operacionVariosNumeros() {
+  const entrada = await pedirNumerosArray('Ingrese los números separados por comas: ');
+  return entrada;
+}
+    
 
 async function operacionUnNumero(operacion, nombreOperacion) {
   const num = await pedirNumero('Ingrese el número: ');
@@ -143,6 +159,27 @@ async function ejecutarOpcion(opcion) {
         'resto'
       );
       break;
+    case '8':
+      const numerosParaPromedio = await operacionVariosNumeros();
+      try{
+        const resultadoPromedio = calc.promedio(numerosParaPromedio);
+        console.log(`\n✓ Resultado: El promedio es ${resultadoPromedio}`);
+      }
+      catch (error){
+        console.log(`\n⚠️  Error: ${error.message}`);
+      }
+      break;
+    
+    case '9': 
+      const numerosParaMaximo = await operacionVariosNumeros();
+      try{
+        const resultadoMaximo = calc.maximo(numerosParaMaximo);
+        console.log(`\n✓ Resultado: El número máximo es ${resultadoMaximo}`);
+      } catch (error){
+        console.log(`\n⚠️  Error: ${error.message}`);
+      }
+      break;
+      
 
     case '9': 
       const numerosParaMaximo = await operacionVariosNumeros();
