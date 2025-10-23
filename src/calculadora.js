@@ -51,9 +51,15 @@ class Calculadora {
       return suma/numeros.length;
     }
   } 
+  // ingresar varios números mediante un array y definir cuál es el máximo
+  maximo(numeros){
+    if (!Array.isArray(numeros)|| numeros.length ===0){
+      throw new Error('Debe ingresar un array de números no vacío');
+    } else{
+      return Math.max(...numeros); //Los 3 puntos son para que el math.max reciba varios números y no un array
+    }
+  }
 }
-
-
 
 // Exportar para usar en tests
 if (typeof module !== 'undefined' && module.exports) {
@@ -75,3 +81,4 @@ console.log('- calc.potencia(base, exponente)');
 console.log('- calc.raizCuadrada(numero)');
 console.log('- calc.resto(a, b)');
 console.log('- calc.promedio(arrayDeNumeros)');
+console.log('- calc.maximo(arrayDeNumeros)');
