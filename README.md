@@ -52,6 +52,7 @@ Verás un menú como este:
 4. Dividir
 5. Potencia
 6. Raíz Cuadrada
+9. Maximo de un arreglo
 0. Salir
 =================================
 ```
@@ -79,3 +80,4 @@ calculadora-curso-git/
 | `dividir(a, b)` | ✅ Implementada | Divide dos números |
 | `potencia(base, exp)` | ✅ Implementada | Eleva un número a una potencia |
 | `raizCuadrada(num)` | ✅ Implementada | Calcula la raíz cuadrada |
+| `maximo(array)` | ✅ Implementada | Encuentra el máximo de un arreglo |
