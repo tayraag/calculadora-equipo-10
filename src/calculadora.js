@@ -51,10 +51,6 @@ class Calculadora {
       return suma/numeros.length;
     }
   } 
-}
-
-
-
   // ingresar varios números mediante un array y definir cuál es el máximo
   maximo(numeros){
     if (!Array.isArray(numeros)|| numeros.length ===0){

@@ -170,6 +170,17 @@ async function ejecutarOpcion(opcion) {
       }
       break;
      
+    
+    case '9': 
+      const numerosParaMaximo = await operacionVariosNumeros();
+      try{
+        const resultadoMaximo = calc.maximo(numerosParaMaximo);
+        console.log(`\n✓ Resultado: El número máximo es ${resultadoMaximo}`);
+      } catch (error){
+        console.log(`\n⚠️  Error: ${error.message}`);
+      }
+      break;
+      
 
     case '9': 
       const numerosParaMaximo = await operacionVariosNumeros();
