@@ -19,6 +19,7 @@ function mostrarMenu() {
   console.log('5. Potencia');
   console.log('6. Raíz Cuadrada');
   console.log('7. Resto de la división');
+  console.log('9. Máximo de varios números');
   console.log('0. Salir');
   console.log('=================================');
 }
@@ -57,6 +58,22 @@ async function operacionUnNumero(operacion, nombreOperacion) {
   } else {
     console.log(`\n✓ Resultado: √${num} = ${resultado}`);
   }
+}
+
+function pedirNumerosArray(mensaje) {
+  return new Promise((resolve) => {
+    rl.question(mensaje, (respuesta) => {
+      const numeros = respuesta.split(',').map(num => parseFloat(num.trim()));
+      resolve(numeros);
+    });
+  });
+}
+
+
+
+async function operacionVariosNumeros() {
+  const entrada = await pedirNumerosArray('Ingrese los números separados por comas: ');
+  return entrada;
 }
 
 function getSimboloOperacion(nombre) {
@@ -126,6 +143,16 @@ async function ejecutarOpcion(opcion) {
         'resto'
       );
       break;
+
+    case '9': 
+      const numerosParaMaximo = await operacionVariosNumeros();
+      try{
+        const resultadoMaximo = calc.maximo(numerosParaMaximo);
+        console.log(`\n✓ Resultado: El número máximo es ${resultadoMaximo}`);
+      } catch (error){
+        console.log(`\n⚠️  Error: ${error.message}`);
+      }
+      break;     
 
     case '0':
       console.log('\n¡Hasta luego! 👋');
