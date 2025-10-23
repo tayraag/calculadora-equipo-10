@@ -60,7 +60,7 @@ async function operacionVariosNumeros() {
   const entrada = await pedirNumerosArray('Ingrese los números separados por comas: ');
   return entrada;
 }
-    
+
 
 async function operacionUnNumero(operacion, nombreOperacion) {
   const num = await pedirNumero('Ingrese el número: ');
@@ -159,38 +159,27 @@ async function ejecutarOpcion(opcion) {
         'resto'
       );
       break;
+
     case '8':
       const numerosParaPromedio = await operacionVariosNumeros();
-      try{
+      try {
         const resultadoPromedio = calc.promedio(numerosParaPromedio);
         console.log(`\n✓ Resultado: El promedio es ${resultadoPromedio}`);
       }
-      catch (error){
+      catch (error) {
         console.log(`\n⚠️  Error: ${error.message}`);
       }
       break;
-     
-    
-    case '9': 
-      const numerosParaMaximo = await operacionVariosNumeros();
-      try{
-        const resultadoMaximo = calc.maximo(numerosParaMaximo);
-        console.log(`\n✓ Resultado: El número máximo es ${resultadoMaximo}`);
-      } catch (error){
-        console.log(`\n⚠️  Error: ${error.message}`);
-      }
-      break;
-      
 
-    case '9': 
+    case '9':
       const numerosParaMaximo = await operacionVariosNumeros();
-      try{
+      try {
         const resultadoMaximo = calc.maximo(numerosParaMaximo);
         console.log(`\n✓ Resultado: El número máximo es ${resultadoMaximo}`);
-      } catch (error){
+      } catch (error) {
         console.log(`\n⚠️  Error: ${error.message}`);
       }
-      break;     
+      break;
 
     case '0':
       console.log('\n¡Hasta luego! 👋');
