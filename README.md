@@ -82,5 +82,4 @@ calculadora-curso-git/
 | `potencia(base, exp)` | ✅ Implementada | Eleva un número a una potencia |
 | `raizCuadrada(num)` | ✅ Implementada | Calcula la raíz cuadrada |
 | `promedio(array)` | ✅ Implementada | Calcula el promedio de un array |
-| `maximo(array)` | ✅ Implementada | Calcula el maximo de un array |
 | `maximo(array)` | ✅ Implementada | Encuentra el máximo de un arreglo |

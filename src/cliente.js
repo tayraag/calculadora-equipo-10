@@ -169,6 +169,7 @@ async function ejecutarOpcion(opcion) {
         console.log(`\n⚠️  Error: ${error.message}`);
       }
       break;
+     
     
     case '9': 
       const numerosParaMaximo = await operacionVariosNumeros();
