@@ -53,6 +53,7 @@ Verás un menú como este:
 5. Potencia
 6. Raíz Cuadrada
 8. Promedio
+9. Maximo de un arreglo
 0. Salir
 =================================
 ```
@@ -81,3 +82,4 @@ calculadora-curso-git/
 | `potencia(base, exp)` | ✅ Implementada | Eleva un número a una potencia |
 | `raizCuadrada(num)` | ✅ Implementada | Calcula la raíz cuadrada |
 | `promedio(array)` | ✅ Implementada | Calcula el promedio de un array |
+| `maximo(array)` | ✅ Implementada | Encuentra el máximo de un arreglo |
