@@ -20,6 +20,7 @@ function mostrarMenu() {
   console.log('6. Raíz Cuadrada');
   console.log('7. Resto de la división');
   console.log('8. Promedio de varios números');
+  console.log('9. Máximo de varios números');
   console.log('0. Salir');
   console.log('=================================');
 }
@@ -152,7 +153,18 @@ async function ejecutarOpcion(opcion) {
         console.log(`\n⚠️  Error: ${error.message}`);
       }
       break;
-     
+    
+    case '9': 
+      const numerosParaMaximo = await operacionVariosNumeros();
+      try{
+        const resultadoMaximo = calc.maximo(numerosParaMaximo);
+        console.log(`\n✓ Resultado: El número máximo es ${resultadoMaximo}`);
+      } catch (error){
+        console.log(`\n⚠️  Error: ${error.message}`);
+      }
+      break;
+      
+
     case '0':
       console.log('\n¡Hasta luego! 👋');
       rl.close();
