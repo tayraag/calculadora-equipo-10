@@ -68,9 +68,24 @@ class Calculadora {
       return Math.max(...numeros);
     }
   }
+
+
+logNatural(x) {
+  if (x <= 0) {
+    throw new Error('El logaritmo natural solo está definido para x > 0');
+  } else {
+    return Math.log(x);
+  }
 }
 
-
+logBase10(x) {
+  if (x <= 0) {
+    throw new Error('El logaritmo base 10 solo está definido para x > 0');
+  } else {
+    return Math.log10(x);
+  }
+}
+}
 
 
 // Exportar para usar en tests
@@ -95,3 +110,6 @@ console.log('- calc.resto(a, b)');
 console.log('- calc.porcentaje(a, b)');
 console.log('- calc.promedio(arrayDeNumeros)');
 console.log('- calc.maximo(arrayDeNumeros)');
+console.log('- calc.logNatural(numero)');
+console.log('- calc.logBase10(numero)');
+
