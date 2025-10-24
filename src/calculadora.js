@@ -38,25 +38,34 @@ class Calculadora {
       return a % b;
     }
   }
+  // Porcentaje de a sobre b
+  porcentaje(a, b) {
+    if (b === 0) {
+      throw new Error('No se puede calcular el porcentaje con divisor cero');
+    } else {
+      return (a / b) * 100;
+    }
+  }
 
-  //Permitir ingresar varios números mediante un array y calcular su promedio.
+  //Promedio de un array de números
   promedio(numeros){
-    if (!Array.isArray(numeros)|| numeros.length ===0){
+    if (!Array.isArray(numeros) || numeros.length === 0){
       throw new Error('Debe ingresar un array de números no vacío');
-    } else{
-      let suma=0;
-      for (let i=0; i<numeros.length; i++){
+    } else {
+      let suma = 0;
+      for (let i = 0; i < numeros.length; i++){
         suma += numeros[i];
       }
-      return suma/numeros.length;
+      return suma / numeros.length;
     }
-  } 
-  // ingresar varios números mediante un array y definir cuál es el máximo
+  }
+
+  //Máximo de un array de números
   maximo(numeros){
-    if (!Array.isArray(numeros)|| numeros.length ===0){
+    if (!Array.isArray(numeros) || numeros.length === 0){
       throw new Error('Debe ingresar un array de números no vacío');
-    } else{
-      return Math.max(...numeros); //Los 3 puntos son para que el math.max reciba varios números y no un array
+    } else {
+      return Math.max(...numeros);
     }
   }
 }
@@ -83,5 +92,6 @@ console.log('- calc.dividir(a, b)');
 console.log('- calc.potencia(base, exponente)');
 console.log('- calc.raizCuadrada(numero)');
 console.log('- calc.resto(a, b)');
+console.log('- calc.porcentaje(a, b)');
 console.log('- calc.promedio(arrayDeNumeros)');
 console.log('- calc.maximo(arrayDeNumeros)');
