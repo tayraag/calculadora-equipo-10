@@ -21,6 +21,10 @@ function mostrarMenu() {
   console.log('7. Resto de la división');
   console.log('8. Promedio de varios números');
   console.log('9. Máximo de varios números');
+  console.log('10. Porcentaje de a sobre b');
+  console.log('11. Logaritmo natural (ln)');
+  console.log('12. Logaritmo base 10');
+
   console.log('0. Salir');
   console.log('=================================');
 }
@@ -180,6 +184,27 @@ async function ejecutarOpcion(opcion) {
         console.log(`\n⚠️  Error: ${error.message}`);
       }
       break;
+
+    case '10':
+      await operacionDosNumeros(
+      (a, b) => calc.porcentaje(a, b),
+      'porcentaje'
+    );
+    break;
+
+    case '11':
+    await operacionUnNumero(
+    (x) => calc.logNatural(x),
+    'logaritmo natural (ln)'
+  );
+  break;
+
+    case '12':
+    await operacionUnNumero(
+    (x) => calc.logBase10(x),
+    'logaritmo base 10 (log10)'
+  );
+  break;
 
     case '0':
       console.log('\n¡Hasta luego! 👋');
