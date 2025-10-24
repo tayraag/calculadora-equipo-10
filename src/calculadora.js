@@ -68,7 +68,7 @@ class Calculadora {
       return Math.max(...numeros);
     }
   }
-}
+
 
 logNatural(x) {
   if (x <= 0) {
@@ -85,7 +85,7 @@ logBase10(x) {
     return Math.log10(x);
   }
 }
-
+}
 
 
 // Exportar para usar en tests
