@@ -85,3 +85,5 @@ calculadora-curso-git/
 | `resto(a, b)` | ✅ Implementada | Calcula el resto de la división |
 | `promedio(array)` | ✅ Implementada | Calcula el promedio de un array |
 | `maximo(array)` | ✅ Implementada | Encuentra el máximo de un arreglo |
+| `factorial(n)` | ✅ Implementada | Calcula el factorial de un numero |
+| `memoria` | ✅ Implementada | guarda el ultimo calculo en memoria para utilizar despues |

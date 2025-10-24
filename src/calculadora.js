@@ -1,33 +1,41 @@
+let memoria=null;
 class Calculadora {
+
   sumar(a, b) {
-    return a + b;
+    memoria= a+b;
+    return memoria;
   }
 
   restar(a, b) {
-    return a - b;
+    memoria= a-b;
+    return memoria;
   }
 
   multiplicar(a, b) {
-    return a * b;
+    memoria= a+b;
+    return memoria;
   }
 
   dividir(a, b) {
     if (b === 0) {
       throw new Error('No se puede dividir por cero');
     } else {
-      return a / b;
+      memoria= a/b;
+      return memoria;
     }
   }
 
   potencia(base, exponente) {
-    return base ** exponente;
+    memoria= base** exponente;
+    return memoria;
   }
 
   raizCuadrada(numero) {
     if (numero < 0) {
       throw new Error('No se puede calcular la raíz cuadrada de un número negativo');
     } else {
-      return Math.sqrt(numero);
+      memoria= Math.sqrt(numero)
+      return memoria;
     }
   }
 
@@ -35,7 +43,8 @@ class Calculadora {
     if (b === 0) {
       throw new Error('No se puede calcular el resto con divisor cero');
     } else {
-      return a % b;
+      memoria= a % b;
+      return memoria;
     }
   }
   // Porcentaje de a sobre b
@@ -43,7 +52,8 @@ class Calculadora {
     if (b === 0) {
       throw new Error('No se puede calcular el porcentaje con divisor cero');
     } else {
-      return (a / b) * 100;
+      memoria= (a / b) * 100;
+      return memoria;
     }
   }
 
@@ -56,7 +66,8 @@ class Calculadora {
       for (let i = 0; i < numeros.length; i++){
         suma += numeros[i];
       }
-      return suma / numeros.length;
+      memoria= suma / numeros.length;
+      return memoria;
     }
   }
 
@@ -65,7 +76,8 @@ class Calculadora {
     if (!Array.isArray(numeros) || numeros.length === 0){
       throw new Error('Debe ingresar un array de números no vacío');
     } else {
-      return Math.max(...numeros);
+      memoria= Math.max(...numeros);
+      return memoria;
     }
   }
 
@@ -74,7 +86,8 @@ logNatural(x) {
   if (x <= 0) {
     throw new Error('El logaritmo natural solo está definido para x > 0');
   } else {
-    return Math.log(x);
+    memoria= Math.log(x);
+    return memoria;
   }
 }
 
@@ -82,7 +95,8 @@ logBase10(x) {
   if (x <= 0) {
     throw new Error('El logaritmo base 10 solo está definido para x > 0');
   } else {
-    return Math.log10(x);
+    memoria= Math.log10(x);
+    return memoria;
   }
 }
 
@@ -90,17 +104,14 @@ factorial(n){
   if (n < 0){
     throw new Error("El factorial esta definido para enteros positivos y cero")
   }
-  let resultado= 1;
+  memoria= 1;
   for (let i =1; i <= n; i++){
-    resultado= resultado*i
+    memoria= memoria*i
   }
-  return resultado
+  return memoria;
 }
 
 }
-
-
-
 
 // Exportar para usar en tests
 if (typeof module !== 'undefined' && module.exports) {
