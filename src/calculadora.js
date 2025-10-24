@@ -85,7 +85,21 @@ logBase10(x) {
     return Math.log10(x);
   }
 }
+
+factorial(n){
+  if (n < 0){
+    throw new Error("El factorial esta definido para enteros positivos y cero")
+  }
+  let resultado= 1;
+  for (let i =1; i <= n; i++){
+    resultado= resultado*i
+  }
+  return resultado
 }
+
+}
+
+
 
 
 // Exportar para usar en tests
@@ -112,4 +126,5 @@ console.log('- calc.promedio(arrayDeNumeros)');
 console.log('- calc.maximo(arrayDeNumeros)');
 console.log('- calc.logNatural(numero)');
 console.log('- calc.logBase10(numero)');
+console.log('- calc.factorial(numero');
 
