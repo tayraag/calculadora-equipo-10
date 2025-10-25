@@ -55,6 +55,9 @@ Verás un menú como este:
 7. Resto
 8. Promedio
 9. Maximo de un arreglo
+14. Historial de Operaciones
+15. Limpiar Historial
+
 0. Salir
 =================================
 ```
@@ -87,3 +90,5 @@ calculadora-curso-git/
 | `maximo(array)` | ✅ Implementada | Encuentra el máximo de un arreglo |
 | `factorial(n)` | ✅ Implementada | Calcula el factorial de un numero |
 | `memoria` | ✅ Implementada | guarda el ultimo calculo en memoria para utilizar despues |
+| `getHistorial()` | ✅ Implementada | Devuelve el historial de operaciones realizadas |
+| `limpiarHistorial()` | ✅ Implementada | Borra todo el historial de operaciones |

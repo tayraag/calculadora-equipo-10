@@ -24,6 +24,8 @@ function mostrarMenu() {
   console.log('10. Porcentaje de a sobre b');
   console.log('11. Logaritmo natural (ln)');
   console.log('12. Logaritmo base 10');
+  console.log('14. Historial de operaciones');
+  console.log('15. Limpiar historial');
 
   console.log('0. Salir');
   console.log('=================================');
@@ -187,24 +189,39 @@ async function ejecutarOpcion(opcion) {
 
     case '10':
       await operacionDosNumeros(
-      (a, b) => calc.porcentaje(a, b),
-      'porcentaje'
-    );
-    break;
+        (a, b) => calc.porcentaje(a, b),
+        'porcentaje'
+      );
+      break;
 
     case '11':
-    await operacionUnNumero(
-    (x) => calc.logNatural(x),
-    'logaritmo natural (ln)'
-  );
-  break;
+      await operacionUnNumero(
+        (x) => calc.logNatural(x),
+        'logaritmo natural (ln)'
+      );
+      break;
 
     case '12':
-    await operacionUnNumero(
-    (x) => calc.logBase10(x),
-    'logaritmo base 10 (log10)'
-  );
-  break;
+      await operacionUnNumero(
+        (x) => calc.logBase10(x),
+        'logaritmo base 10 (log10)'
+      );
+      break;
+
+    case '14':
+      const historial = calc.getHistorial();
+      if (historial.length === 0) {
+        console.log('\n📭 El historial está vacío.');
+      } else {
+        console.log('\n📜 Historial de operaciones:');
+        historial.forEach((op, i) => console.log(`${i + 1}. ${op}`));
+      }
+      break;
+
+    case '15':
+      calc.limpiarHistorial();
+      console.log('\n🧹 Historial limpiado correctamente.');
+      break;
 
     case '0':
       console.log('\n¡Hasta luego! 👋');
