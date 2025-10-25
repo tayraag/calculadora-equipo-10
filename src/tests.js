@@ -195,6 +195,32 @@ test('resto por cero debe lanzar error', () => {
   }
 });
 
+// Tests de Historial
+console.log('\nTests de historial:');
+
+test('debe guardar operaciones realizadas en el historial', () => {
+  const calcHist = new Calculadora();
+  calcHist.sumar(2, 3);
+  calcHist.restar(5, 1);
+  const historial = calcHist.getHistorial();
+  expect(historial.length).toBe(2);
+});
+
+test('debe mostrar la operación correcta en el historial', () => {
+  const calcHist = new Calculadora();
+  calcHist.multiplicar(2, 4);
+  const historial = calcHist.getHistorial();
+  expect(historial[0]).toBe('2 * 4 = 8');
+});
+
+test('el historial debe vaciarse correctamente', () => {
+  const calcHist = new Calculadora();
+  calcHist.sumar(1, 1);
+  calcHist.limpiarHistorial();
+  const historial = calcHist.getHistorial();
+  expect(historial.length).toBe(0);
+});
+
 // Resumen
 console.log('\n=== Resumen ===');
 console.log(`Tests pasados: ${testsPasados}`);
